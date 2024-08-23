@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+}
+
+.header-button {
+    background-color: #197ca3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 48px;
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+}
+
+.logo-header-button {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.text-header-button {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.header-button:hover {
+    cursor: pointer;
+    background-color: #292929;
+}
+
+.header-button:focus {
+    background-color: #292929;
+}

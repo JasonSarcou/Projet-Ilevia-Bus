@@ -1,0 +1,77 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.div-header {
+    margin-left: 103px;
+    margin-right: 103px;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 43px;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.search-basket-account-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ilevia-logo {
+    width: 267.91px;
+    height: 60px;
+    display: inline;
+}
+
+.search-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: hsl(0, 0%, 16%);
+    cursor: pointer;
+}
+
+.IoSearch {
+    height: 20px;
+    width: 20px;
+}
+
+.search-button:focus {
+    background-color: #197ca3;
+    color: white;
+}
+
+.nav-list {
+    max-width: 540px;
+    max-height: 27px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(30px, 200px));
+    gap: 35px;
+}
+
+.nav-list li {
+    cursor: pointer;
+}
+
