@@ -11,35 +11,47 @@ import { BiSolidPurchaseTag } from "react-icons/bi";
 
 
 import HeaderLink from "./headerLink/HeaderLink";
+import { useState } from "react";
+import SearchZone from "./searchZone/SearchZone";
 
 
 function Header() {
+
+    const [isSearchActive, setIsSearchActive] = useState(false);
+
+    function handleSearchButton() {
+        setIsSearchActive(true);
+    }
+
     return(
-        <header>
-            <div className="div-header">
-                <div className="header-left">
-                    <MenuButton></MenuButton>
-                    <img src="src\assets\ilevia_logo.webp" className="ilevia-logo"></img>
-                </div>
-                <div className="header-right">
-                    <div className="search-basket-account-buttons">
-                        <button className="search-button">
-                            <IoSearch className="IoSearch"></IoSearch>
-                        </button>
-                        <HeaderButton icon={<FaBasketShopping className="logo-header-button"/>} text="Panier"></HeaderButton>
-                        <HeaderButton icon={<MdAccountCircle className="logo-header-button"/>} text="Compte"></HeaderButton>
+        <>
+            <header>
+                <div className="div-header">
+                    <div className="header-left">
+                        <MenuButton></MenuButton>
+                        <img src="src\assets\ilevia_logo.webp" className="ilevia-logo"></img>
                     </div>
-                    <nav>
-                        <ul className="nav-list">
-                            <li><HeaderLink icon={<FaClock className="logo-header-link"/>} text={"Horaires"}></HeaderLink></li>
-                            <li><HeaderLink icon={<CiRoute className="logo-header-link"/>} text={"Itinéraires"}></HeaderLink></li>
-                            <li><HeaderLink icon={<RiInformationFill className="logo-header-link"/>} text={"Info Trafic"}></HeaderLink></li>
-                            <li><HeaderLink icon={<BiSolidPurchaseTag className="logo-header-link"/>} text={"Acheter"}></HeaderLink></li>
-                        </ul>
-                    </nav>
+                    <div className="header-right">
+                        <div className="search-basket-account-buttons">
+                            <button className="search-button" onClick={handleSearchButton}>
+                                <IoSearch className="IoSearch"></IoSearch>
+                            </button>
+                            <HeaderButton icon={<FaBasketShopping className="logo-header-button"/>} text="Panier"></HeaderButton>
+                        </div>
+                        <nav>
+                            <ul className="nav-list">
+                                <li><HeaderLink icon={<FaClock className="logo-header-link"/>} text={"Horaires"}></HeaderLink></li>
+                                <li><HeaderLink icon={<CiRoute className="logo-header-link"/>} text={"Itinéraires"}></HeaderLink></li>
+                                <li><HeaderLink icon={<RiInformationFill className="logo-header-link"/>} text={"Info Trafic"}></HeaderLink></li>
+                                <li><HeaderLink icon={<BiSolidPurchaseTag className="logo-header-link"/>} text={"Acheter"}></HeaderLink></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+            <SearchZone isSearchActive={isSearchActive} setIsSearchActive={setIsSearchActive}></SearchZone>
+            <HeaderButton icon={<MdAccountCircle className="logo-header-button"/>} text="Compte"></HeaderButton>
+        </>
     );
 }
 

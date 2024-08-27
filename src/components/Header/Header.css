@@ -1,12 +1,15 @@
 header {
     position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0;
+    background-color: white;
 }
 
 .div-header {
-    margin-left: 103px;
-    margin-right: 103px;
+    width: 100%;
+    max-width: 1090px;
+    margin: auto;
     padding: 15px 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -67,7 +70,7 @@ header {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, minmax(30px, 200px));
+    grid-template-columns: repeat(4, 1fr);
     gap: 35px;
 }
 
