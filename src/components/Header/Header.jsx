@@ -37,6 +37,7 @@ function Header() {
                                 <IoSearch className="IoSearch"></IoSearch>
                             </button>
                             <HeaderButton icon={<FaBasketShopping className="logo-header-button"/>} text="Panier"></HeaderButton>
+                            <HeaderButton icon={<MdAccountCircle className="logo-header-button"/>} text="Compte"></HeaderButton>
                         </div>
                         <nav>
                             <ul className="nav-list">
@@ -50,7 +51,6 @@ function Header() {
                 </div>
             </header>
             <SearchZone isSearchActive={isSearchActive} setIsSearchActive={setIsSearchActive}></SearchZone>
-            <HeaderButton icon={<MdAccountCircle className="logo-header-button"/>} text="Compte"></HeaderButton>
         </>
     );
 }

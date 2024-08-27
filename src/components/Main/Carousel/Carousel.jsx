@@ -13,7 +13,7 @@ function Carousel() {
     return(
         <div className="carousel">
             <Swiper
-                modules={[Autoplay, Navigation, Pagination]}
+                modules={[Autoplay, Pagination]}
                 spaceBetween={50}
                 slidesPerView={1}
                 speed={2200}
